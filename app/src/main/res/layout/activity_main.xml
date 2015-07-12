@@ -12,6 +12,7 @@
 
     <include
         android:id="@+id/toolbarTop"
-        layout="@layout/app_bar" />
+        layout="@layout/app_bar"
+         />
 
 </RelativeLayout>
