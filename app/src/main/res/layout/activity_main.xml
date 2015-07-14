@@ -1,13 +1,17 @@
-<android.support.v4.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="appewtc.masterung.materialdesigntest1.MainActivity">
+
+        <include
+            android:id="@+id/toolbarTop"
+            layout="@layout/app_bar" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -15,10 +19,14 @@
             android:layout_below="@+id/toolbarTop"
             android:text="@string/hello_world" />
 
-        <include
-            android:id="@+id/toolbarTop"
-            layout="@layout/app_bar" />
-
     </RelativeLayout>
+
+    <fragment
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:layout="@layout/fragment_navigation_drawer"
+        android:name="appewtc.masterung.materialdesigntest1.NavigationDrawerFragment"
+        tools:layout="@layout/fragment_navigation_drawer" />
 
 </android.support.v4.widget.DrawerLayout>
